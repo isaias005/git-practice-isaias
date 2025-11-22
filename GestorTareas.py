@@ -48,7 +48,7 @@ class GestorTareas:
 
                 elif self.tareas[a].get_estadp() == "Pendiente":
 
-                    self.tareas[a].get_estado() == "Realizado"   
+                    self.tareas[a].get_estado() == "Realizado "   
                              
         
 
