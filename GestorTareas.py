@@ -16,13 +16,19 @@ class GestorTareas:
             nuevaTarea=Tarea(nombre,estado)
 
             self.tareas.append(nuevaTarea)
+            
     def mostarTareas(self):
+
         if self.tareas==[]:
+
             print("La lista esta vacia")
         else:
+
             i = 0
+
             for tarea in self.tareas:
-                print(i++ + ":" + tarea.get_nombre + tarea.get_estado)
+
+                print("La tarea" + i++ + ":" + "Su nombre es :" + tarea.get_nombre + "La estado es :" + tarea.get_estado)
 
 
     
