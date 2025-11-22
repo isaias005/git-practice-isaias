@@ -10,6 +10,9 @@ class GestorTareas:
         if  nombre == "":
 
             print("Ingrese un nombre")  
+        elif  not estado=="Pendiente"or"Realizado":
+           
+           print(" Ingrese un estado valido ")
 
         else:
 
@@ -49,7 +52,15 @@ class GestorTareas:
                 elif self.tareas[a].get_estadp() == "Pendiente":
 
                     self.tareas[a].get_estado() == "Realizado "   
-                             
+    def eliminarTarea(self,pos):
+
+        for a in range(pos):
+
+            if a==pos:
+             
+             self.tareas.remove(a)
+            
+
         
 
             
