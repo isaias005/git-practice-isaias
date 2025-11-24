@@ -1,16 +1,17 @@
-import Tarea
+from Tarea import Tarea
+
 class GestorTareas:
 
     def __init__(self):
 
-        self.tareas=[]
+        self.tareas:list[Tarea]=[]
 
     def addTarea(self,nombre,estado):
 
         if  nombre == "":
 
             print("Ingrese un nombre")  
-        elif  not estado=="Pendiente"or"Realizado":
+        elif  estado not in("Pendiente","Realizado"):
            
            print(" Ingrese un estado valido ")
 
@@ -20,7 +21,7 @@ class GestorTareas:
 
             self.tareas.append(nuevaTarea)
 
-    def mostarTareas(self):
+    def mostrarTareas(self):
 
         if self.tareas==[]:
 
@@ -30,35 +31,34 @@ class GestorTareas:
             i = 0
 
             for tarea in self.tareas:
-
-                print("La tarea" + i++ + ":" + "Su nombre es :" + tarea.get_nombre() + "La estado es :" + tarea.get_estado())
+                i+=1
+                print("La tarea" , i , ":" , "Su nombre es :" + tarea.get_nombre(), "La estado es :" , tarea.get_estado())
                 
     def marcarTareasPorRealizar(self,pos):
+        indice=pos-1
+        if indice>=len(self.tareas):
+            print(" La posicion esta fuera de rango , ingrese una posicion valida ")
+        else:
+            if(self.tareas[indice].get_estado()=="Realizado"):                    
+                print(" La tarea q escogio ya estaba realizada favor de escoger otra ")
 
-      if pos>len(self.tareas):
-          
-          print(" La posicion esta fuera de rango , ingrese una posicion valida ")
+            elif self.tareas[indice].get_estado() == "Pendiente":
 
-      else:
-          
-          for a in range(pos):
-              
-              if a==pos:
+                     self.tareas[indice].set_estado("Realizado")
 
-                if(self.tareas[a].get_esatdo()=="Realizado"):
-                      
-                      print(" La tarea q escogio ya estaba realizada favor de escoger otra ")
-
-                elif self.tareas[a].get_estadp() == "Pendiente":
-
-                    self.tareas[a].get_estado() == "Realizado "   
     def eliminarTarea(self,pos):
 
-        for a in range(pos):
+        indice=pos-1
 
-            if a==pos:
-             
-             self.tareas.remove(a)
+        if indice>=len(self.tareas) or pos<0:
+                  
+                  print("La posicion q escogio esta fuera de rango")
+        else:
+         self.tareas.pop(indice)
+
+         print("Tarea eliminada con exito")
+
+         return
             
 
         

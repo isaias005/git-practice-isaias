@@ -1,14 +1,14 @@
 class Tarea:
    
-   nombre:str
+    nombre:str
 
-   estado:str
+    estado:str
 
-   def __init__ (self,nombre,estado):
+    def __init__ (self,nombre,estado):
 
-    self.nombre=nombre
+      self.nombre=nombre
 
-    self.estado=estado
+      self.estado=estado
 
     def get_nombre(self):
 
@@ -18,10 +18,10 @@ class Tarea:
 
       return self.estado
     
-    def set_nombre(slef,nomb):
+    def set_nombre(self,nomb):
 
-      self.nombre=nomb
+     self.nombre=nomb
 
-    def set_estado(slef,est):
+    def set_estado(self,est):
       
       self.estado=est
