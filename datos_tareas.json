@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Recoger mandados",
+        "estado": "Pendiente"
+    },
+    {
+        "nombre": "Arreglar Mesa",
+        "estado": "Pendiente"
+    },
+    {
+        "nombre": "Arreglar Silla",
+        "estado": "Pendiente"
+    },
+    {
+        "nombre": "Leer libro",
+        "estado": "Realizado"
+    },
+    {
+        "nombre": "Correr maraton",
+        "estado": "Realizado"
+    },
+    {
+        "nombre": "Tener sexo",
+        "estado": "Pendiente"
+    },
+    {
+        "nombre": "Tener sexo en 10min",
+        "estado": "Pendiente"
+    }
+]
