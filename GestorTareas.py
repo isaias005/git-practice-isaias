@@ -20,6 +20,7 @@ class GestorTareas:
             nuevaTarea=Tarea(nombre,estado)
 
             self.tareas.append(nuevaTarea)
+            print("La tarea a sido anadida con exito")
 
     def mostrarTareas(self):
 
